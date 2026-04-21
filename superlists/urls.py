@@ -1,6 +1,7 @@
-from django.conf.urls import url
-from lists import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    url(r'^$', views.home_page, name='home'),
+    path('admin/', admin.site.urls),
+    path('', include('lists.urls')),
 ]
